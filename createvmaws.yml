@@ -1,0 +1,13 @@
+---
+  - name: sample play to launch ec2
+    hosts: localhost
+    connection: local
+    gather_facts: false
+    tasks: 
+      - name: deploy ec2 instance
+        ec2: 
+         instance_type: t2.micro
+         image: ami-0947d2ba12ee1ff75
+         region: eu-north-1
+
+      
