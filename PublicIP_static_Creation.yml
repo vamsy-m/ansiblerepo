@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  connection: local
+  tasks:
+      - name: Create public ip
+        azure_rm_publicipaddress:
+          resource_group: DemoRG
+          allocation_method: Static
+          name: PublicIPdemo
